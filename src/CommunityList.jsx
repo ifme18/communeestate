@@ -28,7 +28,7 @@ const CommunityList = () => {
     e.preventDefault();
     try {
       const url = isEditing
-        ? `https://new-server-directory.onrender.com/${editId}`
+        ? `https://new-server-directory.onrender.com/communities/${editId}`
         : 'https://new-server-directory.onrender.com/communities';
       const method = isEditing ? 'PUT' : 'POST';
 
@@ -57,7 +57,7 @@ const CommunityList = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://new-server-directory.onrender.com/${id}`, {
+      const response = await fetch(`https://new-server-directory.onrender.com/communities/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) fetchCommunities();
